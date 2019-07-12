@@ -6,9 +6,15 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context.xsd">
 
-   <bean id="Cycle" class="com.stackroute.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy" >
+   <!--bean id="Cycle" class="com.stackroute.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy" >
 
+   </bean-->
+   <bean id="Abinash" class="com.stackroute.domain.Actor">
+      <constructor-arg name="name" value="avinas"></constructor-arg>
+      <constructor-arg name="gender" value="m"></constructor-arg>
+      <constructor-arg name="age" value="23"></constructor-arg>
    </bean>
+   <bean id="post-processor" class="com.stackroute.BeanPostProcessorDemoBean"></bean>
 
 </beans>
 

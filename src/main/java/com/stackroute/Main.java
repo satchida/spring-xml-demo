@@ -15,11 +15,9 @@ public class Main {
     public static void main(String[] args) {
 
         ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie=context.getBean("movie",Movie.class);
-        System.out.println(movie);
+        //((ClassPathXmlApplicationContext)context).registerShutdownHook();
+        //BeanLifecycleDemoBean beanLifecycleDemoBean=context.getBean("Cycle",BeanLifecycleDemoBean.class);
 
-        Movie movie1=context.getBean("movieA",Movie.class);
-        System.out.println(movie1);
-
+       // BeanPostProcessorDemoBean beanPostProcessorDemoBean=context.getBean("post-processor",BeanPostProcessorDemoBean.class);
     }
 }
