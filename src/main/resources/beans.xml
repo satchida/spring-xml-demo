@@ -6,40 +6,9 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="actor1" class="com.stackroute.domain.Actor">
+   <bean id="Cycle" class="com.stackroute.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy" >
 
-        <constructor-arg name="name" value="Akshay kumar" type="java.lang.String"/>
-        <constructor-arg name="gender" value="Male" type="java.lang.String"/>
-        <constructor-arg name="age" value="53" type="int"></constructor-arg>
-    </bean>
-
-    <bean id="actor2" class="com.stackroute.domain.Actor">
-
-        <constructor-arg name="name" value="Salman Khan" type="java.lang.String"/>
-        <constructor-arg name="gender" value="Male" type="java.lang.String"/>
-        <constructor-arg name="age" value="58" type="int"></constructor-arg>
-    </bean>
-
-    <bean id="actor3" class="com.stackroute.domain.Actor">
-
-        <constructor-arg name="name" value="Anil Kapoor" type="java.lang.String"/>
-        <constructor-arg name="gender" value="Male" type="java.lang.String"/>
-        <constructor-arg name="age" value="63" type="int"></constructor-arg>
-    </bean>
-   <bean id="movie" class="com.stackroute.domain.Movie" scope="prototype" autowire="byName">
-
-    </bean>
-
-
-    <bean id="movieA" class="com.stackroute.domain.Movie" scope="prototype" autowire="constructor">
-
-    </bean>
-
-   <!-- <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">
-        <constructor-arg name="actor" ref="actor1"></constructor-arg>
-        <constructor-arg name="actor1" ref="actor2"></constructor-arg>
-        <constructor-arg name="actor2" ref="actor3"></constructor-arg>
-    </bean>-->
+   </bean>
 
 </beans>
 
