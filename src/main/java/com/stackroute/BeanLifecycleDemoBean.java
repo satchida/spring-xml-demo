@@ -8,14 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
 
-    public static void main(String[] args) throws Exception {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-
-        ((ClassPathXmlApplicationContext)context).registerShutdownHook();
-        BeanLifecycleDemoBean beanLifecycleDemoBean = context.getBean("Cycle", BeanLifecycleDemoBean.class);
-
-    }
 
     public void destroy() throws Exception {
         System.out.println("Destroy");
